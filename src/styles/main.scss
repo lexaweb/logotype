@@ -1,0 +1,179 @@
+body {
+  .wrapper {
+    main {
+      .main-page {
+        padding-top: 33px;
+        padding-bottom: 134px;
+        .top-slider {
+          margin-bottom: 45px;
+          .swiper-slide {
+            img {
+              width: 100%;
+            }
+          }
+          .swiper-pagination {
+            bottom: 13px;
+          }
+          .swiper-button-prev,
+          .swiper-button-next {
+            width: 85px;
+            height: 85px;
+            color: #1fb6ff;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.4);
+            &::after {
+              content: '';
+            }
+            svg {
+              width: 15px;
+              height: 25px;
+            }
+          }
+          .swiper-button-disabled {
+            color: $grey;
+            opacity: 1;
+          }
+          .swiper-button-prev {
+            left: -31px;
+          }
+          .swiper-button-next {
+            right: -31px;
+            transform: rotate(180deg);
+          }
+          .swiper-pagination-bullet {
+            opacity: 1;
+            background: rgba(241, 241, 241, 0.5);
+            &-active {
+              background: #1fb6ff;
+            }
+          }
+        }
+        .section-text {
+          width: 67%;
+          margin: 0 auto;
+          margin-bottom: 102px;
+          &__title {
+            margin-bottom: 20px;
+            font: 600 42px/52px $SourceSansPro;
+            color: $black;
+          }
+          &__title-list {
+            margin-bottom: 15px;
+            font: 600 24px/31px $SourceSansPro;
+            color: $black;
+          }
+          &__title-mini-list {
+            margin-bottom: 5px;
+            font: 600 18px/30px $SourceSansPro;
+            color: $black;
+          }
+          &__text-list {
+            margin-bottom: 20px;
+            font: 400 16px/24px $SourceSansPro;
+            color: rgba(59, 72, 88, 0.9);
+            mark {
+              background: $blue;
+              color: #fff;
+            }
+            ul {
+              padding-left: 60px;
+              li {
+                position: relative;
+                margin-bottom: 20px;
+                &::before {
+                  position: absolute;
+                  left: -30px;
+                  content: '⁃';
+                }
+                &:last-child {
+                  margin-bottom: 0;
+                }
+              }
+            }
+            ol {
+              padding-left: 48px;
+              li {
+                margin-bottom: 20px;
+                padding-left: 15px;
+                &:last-child {
+                  margin-bottom: 0;
+                }
+              }
+            }
+            a {
+              color: $blue;
+              &:hover {
+                opacity: 0.7;
+              }
+            }
+          }
+          &__table {
+            &-head {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr 1fr;
+              padding: 7px 20px;
+              border-bottom: 2px solid #e1e8f0;
+              font: 600 18px/23px $SourceSansPro;
+              color: $black;
+            }
+            &-row {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr 1fr;
+              padding: 20px;
+              border-bottom: 1px solid #e1e8f0;
+              font: 400 16px/20px $SourceSansPro;
+              color: $black;
+              &:last-child {
+                border-bottom: none;
+              }
+            }
+          }
+        }
+        .listing {
+          &__title {
+            margin-bottom: 20px;
+            font: 600 22px/28px $SourceSansPro;
+            color: #8591a5;
+          }
+          &__list {
+            display: flex;
+            flex-wrap: wrap;
+          }
+          &__item {
+            width: calc((100% - 20px) / 4);
+          }
+          &__img {
+            position: relative;
+            img {
+              border-radius: 6px;
+            }
+          }
+          &__time {
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            padding: 2px 7px;
+            font: 600 14px/18px $SourceSansPro;
+            color: #fff;
+            border-radius: 3px;
+            background: rgba(33, 50, 72, 0.7);
+          }
+          &__title-item {
+            margin-bottom: 2px;
+            font: 600 16px/20px $SourceSansPro;
+            color: $black;
+          }
+          &__descr-item {
+            margin-bottom: 5px;
+            font: 400 14px/20px $SourceSansPro;
+            color: $black;
+          }
+          &__text-item {
+            font: 400 14px/20px $SourceSansPro;
+            color: $grey;
+          }
+        }
+      }
+    }
+  }
+}

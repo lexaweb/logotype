@@ -1,0 +1,35 @@
+-
+  var headerMenu =[
+    { title: 'Menu 1', link: '/' },
+    { title: 'Menu 2',
+      item: [
+        { name: 'Link 1', link: '/' },
+        { name: 'Link 2', link: '/' },
+        { name: 'Link 3', link: '/' },
+        { name: 'Link 4', link: '/' },
+        { name: 'Link 5', link: '/' }
+      ]
+    },
+    { title: 'Menu 3', link: '/' },
+  ]
+
+header.header
+  .inner
+    .header__menu
+      .header__logo
+        a(href='/')
+          +icon('icon_logo')
+      each headerMenuItem, index in headerMenu
+        .header__item
+          case index
+            when 1
+              .header__title.arrow=headerMenuItem.title
+              ul.header__list
+                each headerMenuItemName in headerMenuItem.item
+                  li.header__name
+                    a(href=headerMenuItemName.link)=headerMenuItemName.name
+            default
+              .header__title
+                a(href=headerMenuItem.link)=headerMenuItem.title
+    a.header__basket(href='/')
+      +icon('icon_shopping-cart')

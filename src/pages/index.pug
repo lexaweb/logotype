@@ -1,0 +1,87 @@
+extends layouts/layout
+
+block variables
+  -const pageTitle ='Main'
+
+  -
+    var sliderlist =[
+      {img: 'img/fancy_img1.png', alt: 'fancy_img1'},
+      {img: 'img/fancy_img2.png', alt: 'fancy_img2'},
+      {img: 'img/fancy_img3.png', alt: 'fancy_img3'},
+    ]
+
+block content
+  main
+    .main-page
+      .inner
+        section.top-slider
+          .top-slider__list.swiper-container
+            .swiper-wrapper
+              each sliderlistItem in sliderlist
+                .swiper-slide
+                  .top-slider__img
+                    img(src=sliderlistItem.img, alt=sliderlistItem.alt)
+            .swiper-pagination
+            .swiper-button-prev
+              +icon('icon_arrow-left')
+            .swiper-button-next
+              +icon('icon_arrow-left')
+        section.section-text
+          .section-text__title I Left The “Grand Old Party”
+          .section-text__list
+            .section-text__title-list for Producers
+            .section-text__text-list Last night, the unimaginable happened. Donald Trump became the presumptive Republican nominee with his win in Indiana. His remaining rivals for the nomination, Ted Cruz and John Kasich, have bowed out of the race, and the RNC is now treating him as the winner. Which means it’s time for me to be a man and stick with my promise from back in August and March. It’s time for this Republican to leave the party.
+            .section-text__text-list I explained in greater length back in March how I ended up a Republican in the first place. I have been a member of the Grand Old Party since I was in seventh grade. But now almost two decades later, I find myself no longer being able to convince myself to stay in it
+            .section-text__text-list
+              ul
+                li The Republican Party I joined promoted fiscal responsibility, strong foreign policy abroad, and individual  		liberty. The party that I’ve seen of late is one that is none of that.
+                li The Republican Party fought against slavery under Lincoln and fought the KKK under Grant. Now, it 		nominates a man who hesitates when confronted with support from the KKK and has manually re-tweeted 		racist and anti-Semitic accounts.
+            .section-text__text-list I explained in greater length back in March how I ended up a Republican in the first place. I have been a member of the Grand Old Party since I was in seventh grade. But now almost two decades later, I find myself no longer being able to convince myself to stay in it
+            .section-text__text-list
+              ol
+                  li The Republican Party I joined promoted fiscal responsibility, strong foreign policy abroad, and individual  		liberty. The party that I’ve seen of late is one that is none of that.
+                  li The Republican Party fought against slavery under Lincoln and fought the KKK under Grant. Now, it 		nominates a man who hesitates when confronted with support from the KKK and has manually re-tweeted 		racist and anti-Semitic accounts.
+            .section-text__text-list I explained in greater length back in March how I ended up a Republican in the first place. I have been a member of the Grand Old Party since I was in seventh grade. But now almost two decades later, I find myself no longer being able to convince myself to stay in it
+            .section-text__text-list
+              a(href='https://www.hotnewhiphop.com/download-24hrs-new-dj-drama-hosted-mixtape-12-am-in-atlanta-new-mixtape.117497.html') https://www.hotnewhiphop.com/download-24hrs-new-dj-drama-hosted-mixtape-12-am-in-atlanta-new-mixtape.117497.html
+            .section-text__text-list I explained in greater length back in March how I ended up a Republican in the first place. I have been a member of the Grand Old Party since I was in seventh <mark>grade. But now</mark> almost two decades later, I find myself no longer being able to convince myself to stay in it
+            .section-text__title-list for Producers
+            .section-text__title-mini-list No fees from beat sale
+            .section-text__text-list I explained in greater length back in March how I ended up a Republican in the first place. I have been a member of the Grand Old Party since I was in seventh grade. But now almost two decades later, I find myself no longer being able to convince myself to stay in it
+            .section-text__title-mini-list No fees from beat sale
+            .section-text__text-list I explained in greater length back in March how I ended up a Republican in the first place. I have been a member of the Grand Old Party since I was in seventh grade. But now almost two decades later, I find myself no longer being able to convince myself to stay in it
+          .section-text__table
+            .section-text__table-head
+              .section-text__table-cell Column 1
+              .section-text__table-cell Column 2
+              .section-text__table-cell Column 3
+              .section-text__table-cell Column 4
+            .section-text__table-body
+              .section-text__table-row
+                .section-text__table-cell Something
+                .section-text__table-cell Something
+                .section-text__table-cell Something
+                .section-text__table-cell Something
+              .section-text__table-row
+                .section-text__table-cell Something
+                .section-text__table-cell Something
+                .section-text__table-cell Something
+                .section-text__table-cell
+                 p Something
+                 p Something
+                 p Something
+              .section-text__table-row
+                .section-text__table-cell Something
+                .section-text__table-cell Something
+                .section-text__table-cell Something
+                .section-text__table-cell Something
+        section.listing
+          .listing__title Listing  (32 043)
+          .listing__list
+            .listing__item
+              .listing__img
+                img(src="img/fancy_img1.png", alt="fancy_img1")
+                .listing__time 0:17
+              .listing__title-item Game of Thrones, S03E01
+              .listing__descr-item by Norman Jefferson
+              .listing__text-item end up

@@ -1,0 +1,94 @@
+body {
+  .header {
+    padding: 11px 0;
+    box-shadow: 0 0 3px 0 rgba(31, 45, 61, 0.05), 0 2px 6px 0 rgba(31, 45, 61, 0.07);
+    .inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__logo {
+      margin-right: 120px;
+      a {
+        width: 178px;
+        height: 38px;
+      }
+    }
+    &__menu {
+      display: flex;
+      align-items: center;
+      z-index: 1;
+    }
+    &__item {
+      position: relative;
+      margin-right: 40px;
+      &:hover {
+        .header__title {
+          &.arrow {
+            &::after {
+              top: 40%;
+              transform: rotate(180deg);
+            }
+          }
+        }
+        .header__list {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &__list {
+      position: absolute;
+      padding-top: 25px;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.3s;
+    }
+    &__name {
+      margin-top: 10px;
+      white-space: nowrap;
+      &:first-child {
+        margin-top: 0;
+      }
+      a {
+        font: 16px/1.5 $SourceSansPro;
+        color: $grey;
+      }
+    }
+    &__title {
+      font: 600 18px/23px $SourceSansPro;
+      color: $grey;
+      cursor: pointer;
+      &.arrow {
+        position: relative;
+        padding-right: 15px;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 30%;
+          right: 0;
+          width: 9px;
+          height: 9px;
+          transition: 0.3s ease;
+          background: url("data:image/svg+xml,%3Csvg aria-hidden='true' data-prefix='fas' data-icon='caret-down' class='svg-inline--fa fa-caret-down fa-w-10' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='%238392A6' d='M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z'/%3E%3C/svg%3E") no-repeat center/cover;
+        }
+      }
+      a {
+        text-transform: inherit;
+        font: inherit;
+        color: inherit;
+      }
+    }
+    &__basket {
+      width: 24px;
+      height: 24px;
+      color: $grey;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
