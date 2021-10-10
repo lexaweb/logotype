@@ -2,7 +2,7 @@
   "name": "gulp-pug-template",
   "version": "1.2.5",
   "description": "simple pug+scss template",
-  "author": "Alexey Kozyutenko",
+  "author": "Alexey",
   "license": "MIT",
   "main": "gulpfile.js",
   "scripts": {

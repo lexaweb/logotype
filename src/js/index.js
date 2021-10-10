@@ -10,47 +10,62 @@ import 'tooltipster'
 import './_backend'
 
 $(function () {
-  uiSelects()
-  inputMask()
-  checkInputFill()
-  validation()
+  // uiSelects()
+  // inputMask()
+  // checkInputFill()
+  // validation()
+  sliderInputInit()
   sliderInit()
 })
 
-function uiSelects() {
-  const selects = $('.ui-select select')
-  selects.each(function () {
-    const current = $(this)
-    const currentWrap = current.parent('.ui-select')
-    current.select2({
-      minimumResultsForSearch: Number.POSITIVE_INFINITY,
-      width: 'auto',
-      dropdownAutoWidth: true,
-      dropdownParent: currentWrap
-    })
-  })
-}
+// function uiSelects() {
+//   const selects = $('.ui-select select')
+//   selects.each(function () {
+//     const current = $(this)
+//     const currentWrap = current.parent('.ui-select')
+//     current.select2({
+//       minimumResultsForSearch: Number.POSITIVE_INFINITY,
+//       width: 'auto',
+//       dropdownAutoWidth: true,
+//       dropdownParent: currentWrap
+//     })
+//   })
+// }
 
-function inputMask() {
-  Inputmask({
-    mask: '+7 (999) 999-99-99',
-    showMaskOnHover: false
-  }).mask('#phone')
-}
+// function inputMask() {
+//   Inputmask({
+//     mask: '+7 (999) 999-99-99',
+//     showMaskOnHover: false
+//   }).mask('#phone')
+// }
 
-function checkInputFill() {
-  $('.ui-input input').val('')
-  $('input').on('change', function () {
-    if ($(this).val() !== '') {
-      $(this).addClass('filled')
-    } else {
-      $(this).removeClass('filled')
-    }
-  })
-}
+// function checkInputFill() {
+//   $('.ui-input input').val('')
+//   $('input').on('change', function () {
+//     if ($(this).val() !== '') {
+//       $(this).addClass('filled')
+//     } else {
+//       $(this).removeClass('filled')
+//     }
+//   })
+// }
 
-function validation() {
-  $('form').parsley()
+// function validation() {
+//   $('form').parsley()
+// }
+
+function sliderInputInit() {
+  var snapSlider = document.getElementById('slider-snap');
+
+  noUiSlider.create(snapSlider, {
+      start: [0, 10],
+      connect: true,
+      step: 1,
+      range: {
+          'min': 0,
+          'max': 15
+      }
+  });
 }
 
 function sliderInit() {

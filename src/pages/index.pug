@@ -10,6 +10,22 @@ block variables
       {img: 'img/fancy_img3.png', alt: 'fancy_img3'},
     ]
 
+  -
+    var listinglist =[
+      {img: 'img/fancy_img1.png', alt: 'fancy_img1', time: '0:17', title: 'Game of Thrones, S03E01', descr: 'by Norman Jefferson', text: 'end up'},
+      {img: 'img/fancy_img1.png', alt: 'fancy_img1', time: '0:17', title: 'Game of Thrones, S03E01', descr: 'by Norman Jefferson', text: 'end up'},
+      {img: 'img/fancy_img1.png', alt: 'fancy_img1', time: '0:17', title: 'Game of Thrones, S03E01', descr: 'by Norman Jefferson', text: 'end up'},
+      {img: 'img/fancy_img1.png', alt: 'fancy_img1', time: '0:17', title: 'Game of Thrones, S03E01', descr: 'by Norman Jefferson', text: 'end up'},
+      {img: 'img/fancy_img1.png', alt: 'fancy_img1', time: '0:17', title: 'Game of Thrones, S03E01', descr: 'by Norman Jefferson', text: 'end up'},
+      {img: 'img/fancy_img1.png', alt: 'fancy_img1', time: '0:17', title: 'Game of Thrones, S03E01', descr: 'by Norman Jefferson', text: 'end up'},
+      {img: 'img/fancy_img1.png', alt: 'fancy_img1', time: '0:17', title: 'Game of Thrones, S03E01', descr: 'by Norman Jefferson', text: 'end up'},
+      {img: 'img/fancy_img1.png', alt: 'fancy_img1', time: '0:17', title: 'Game of Thrones, S03E01', descr: 'by Norman Jefferson', text: 'end up'},
+      {img: 'img/fancy_img1.png', alt: 'fancy_img1', time: '0:17', title: 'Game of Thrones, S03E01', descr: 'by Norman Jefferson', text: 'end up'},
+      {img: 'img/fancy_img1.png', alt: 'fancy_img1', time: '0:17', title: 'Game of Thrones, S03E01', descr: 'by Norman Jefferson', text: 'end up'},
+      {img: 'img/fancy_img1.png', alt: 'fancy_img1', time: '0:17', title: 'Game of Thrones, S03E01', descr: 'by Norman Jefferson', text: 'end up'},
+      {img: 'img/fancy_img1.png', alt: 'fancy_img1', time: '0:17', title: 'Game of Thrones, S03E01', descr: 'by Norman Jefferson', text: 'end up'}
+    ]
+
 block content
   main
     .main-page
@@ -78,10 +94,21 @@ block content
         section.listing
           .listing__title Listing  (32 043)
           .listing__list
-            .listing__item
-              .listing__img
-                img(src="img/fancy_img1.png", alt="fancy_img1")
-                .listing__time 0:17
-              .listing__title-item Game of Thrones, S03E01
-              .listing__descr-item by Norman Jefferson
-              .listing__text-item end up
+            each listinglistItem in listinglist
+              .listing__item
+                .listing__img
+                  img(src=listinglistItem.img, alt=listinglistItem.alt)
+                  .listing__time=listinglistItem.time
+                .listing__title-item=listinglistItem.title
+                .listing__descr-item=listinglistItem.descr
+                .listing__text-item=listinglistItem.text
+        section.gradient
+          .gradient__title Gradient
+          .gradient__list
+            .gradient__item
+            .gradient__item
+        section.range
+          .range__title Range Input
+          .range__list
+            .range__text Title
+            .range__input#slider-snap
